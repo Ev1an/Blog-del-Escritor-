@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header>
         <h1>Blog de Poesía y Arte</h1>
         <nav>
@@ -29,7 +28,7 @@
             </ul>
         </nav>
         <div id="busqueda">
-            <input type="search" id="buscar-input" placeholder="Buscar...">
+            <input type="search" id="buscar-input" placeholder="Buscar..."> <!--Barra de navegación-->
         </div>
     </header>
     
@@ -38,7 +37,7 @@
         <section id="inicio">
             <div class="tarjeta-grande">
                 <div class="autor-imagen">
-                    <img src="img/representacion.png" >
+                    <img src="img/representacion.png"> <!--Foto de perfil-->
                 </div>
                 <h2>Bienvenidos</h2>
                 <p>Bienvenidos a mi blog, un espacio donde comparto mi pasión por la poesía y el arte. Espero que disfruten de mis creaciones y encuentren inspiración en ellas.</p>
@@ -48,24 +47,34 @@
         <!-- Sección Sobre Mí -->
         <section id="sobre-mi">
             <h2>Sobre Mí</h2>
-            <p>Hola, soy (Nombre), un apasionado de la poesía y el arte. A través de este blog, comparto mis pensamientos y creaciones con el mundo. ¡Gracias por visitar mi espacio creativo!</p>
+            <p>Hola, soy Takora Tempest, un apasionado de la poesía y el arte. A través de este blog, comparto mis pensamientos y creaciones con el mundo 😊. ¡Gracias por visitar mi espacio creativo!</p>
         </section>
         
         <!-- Sección de Poesía -->
         <section id="poesia">
-            <h2>Poesia</h2>
+            <h2>Poesía</h2>
             <div class="poesia-container">
-                <div class="tarjeta">
-                    <a href="#poesia"><h3>Título del Poema</h3></a>
+                <div class="tarjeta" onclick="abrirPopup('poema1')">
+                    <h3>Título del Poema</h3>
                     <p>Este es un ejemplo de un poema que podría incluirse en el blog. La poesía es un reflejo de nuestras emociones y experiencias, capturadas en palabras.</p>
                 </div>
-                <div class="tarjeta">
-                    <a href="#poesia"><h3>Título del Poema 2</h3></a>
+                <div class="tarjeta" onclick="abrirPopup('poema2')">
+                    <h3>Título del Poema 2</h3>
                     <p>Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores.</p>
                 </div>
+                <!-- Añade aquí más tarjetas si es necesario -->
             </div>
         </section>
-        
+
+        <!-- Ventana emergente (popup) -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="cerrarPopup()">&times;</span>
+                <h2 id="popup-title">Título del Poema</h2>
+                <p id="popup-text">Aquí va el contenido del poema seleccionado...</p>
+            </div>
+        </div>
+
         <!-- Sección de Arte -->
         <section id="arte">
             <h2 style="font-size: 60px;">Arte</h2>
@@ -84,44 +93,39 @@
                         <p>Otra obra de arte que demuestra la creatividad y la habilidad del autor.</p>
                     </div>
                 </div>
+                <!-- Añade más tarjetas de arte aquí -->
             </div>
         </section>
-        
+
         <section id="contacto">
             <div class="tarjeta-grande">
                 <h2>Contacto</h2>
-                <p>Para consultas o comentarios, por favor envíame un correo a <a href="mailto:tuemail@example.com">Click aquí</a>.</p>
+                <p>Para consultas o comentarios, por favor envíame un correo a <a href="mailto:tempesttakora@gmail.com">Click aquí</a>.</p>
                 <div class="redes-sociales">
-                    <a href="https://www.facebook.com/tuperfil" target="_blank">
+                    <a href="https://www.facebook.com/share/1XdEUCMkCj/" target="_blank">
                         <i class="fab fa-facebook icono-red-social"></i>Facebook
                     </a>
-                    <a href="https://www.instagram.com/tuperfil" target="_blank">
+                    <a href="https://www.instagram.com/takoratempest?igsh=aGZpeDF1MjNuaG9t" target="_blank">
                         <i class="fab fa-instagram icono-red-social"></i>Instagram
                     </a>
                 </div>
             </div>
-            </section>
-            <section id="soporte-tecnico">
-                <div class="tarjeta-grande">
-                    <h2>Soporte Técnico</h2>
-                    <p>Si tienes problemas técnicos o necesitas asistencia, por favor contáctame a través de los siguientes canales:</p>
-                    <div class="redes-sociales">
-                        <a href="https://www.facebook.com/tuperfil" target="_blank">
-                            <i class="fab fa-facebook icono-red-social"></i> Facebook
-                        </a>
-                        <a href="https://www.instagram.com/tuperfil" target="_blank">
-                            <i class="fab fa-instagram icono-red-social"></i> Instagram
-                        </a>
-                        <a href="mailto:tuemail@example.com">
-                            <i class="fas fa-envelope icono-red-social"></i> Correo Electrónico
-                        </a>
-                    </div>
+        </section>
+
+        <section id="soporte-tecnico">
+            <div class="tarjeta-grande">
+                <h2>Soporte Técnico</h2>
+                <p>Si tienes problemas técnicos o necesitas asistencia, por favor contacte con el desarrollador:</p>
+                <div class="redes-sociales">
+                    <a href="mailto:kkuroba588@gmail.com">
+                        <i class="fas fa-envelope icono-red-social"></i> Correo Electrónico
+                    </a>
                 </div>
-            </section>
-            
-            <!-- Incluye el siguiente enlace en la sección <head> de tu documento HTML si aún no lo has hecho -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-            
+            </div>
+        </section>
+
+        <!-- Incluye el siguiente enlace en la sección <head> de tu documento HTML si aún no lo has hecho -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </main>
     
     <footer>
@@ -130,44 +134,74 @@
 
     <!-- Añade este div para mostrar los resultados de la búsqueda -->
     <div id="resultados-busqueda"></div>
-    
+
     <!-- Código JavaScript para la barra de búsqueda -->
     <script>
-        document.getElementById("buscar-input").addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                realizarBusqueda();
+    // Función para abrir el popup con el contenido del poema seleccionado
+    function abrirPopup(poemaId) {
+        let titulo = "Título del Poema";
+        let texto = "Aquí va el contenido del poema seleccionado...";
+
+        if (poemaId === 'poema1') {
+            titulo = "Título del Poema";
+            texto = "Este es un ejemplo de un poema que podría incluirse en el blog...";
+        } else if (poemaId === 'poema2') {
+            titulo = "Título del Poema 2";
+            texto = "Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores...";
+        }
+
+        document.getElementById("popup-title").innerText = titulo;
+        document.getElementById("popup-text").innerText = texto;
+        document.getElementById("popup").style.display = "block";
+        document.body.style.overflow = "hidden"; // Deshabilitar el scroll
+        document.body.classList.add("blur-background"); // Agregar clase para difuminar el fondo
+    }
+
+    // Función para cerrar el popup
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+        document.body.style.overflow = "auto"; // Habilitar el scroll
+        document.body.classList.remove("blur-background"); // Remover clase para difuminar el fondo
+    }
+
+    // Función para realizar la búsqueda en la barra de búsqueda
+    function realizarBusqueda() {
+        let query = document.getElementById("buscar-input").value.toLowerCase();
+        let tarjetas = document.querySelectorAll(".tarjeta, .tarjeta-arte");
+        let resultados = [];
+
+        tarjetas.forEach(function(tarjeta) {
+            let texto = tarjeta.textContent.toLowerCase();
+            tarjeta.style.display = "none"; // Oculta todas las tarjetas inicialmente
+            if (texto.includes(query)) {
+                tarjeta.style.display = "block";
+                resultados.push(tarjeta);
             }
         });
 
-        function realizarBusqueda() {
-            let query = document.getElementById("buscar-input").value.toLowerCase();
-            let tarjetas = document.querySelectorAll(".tarjeta, .tarjeta-arte");
-            let resultados = [];
+        let resultadosBusqueda = document.getElementById("resultados-busqueda");
+        resultadosBusqueda.innerHTML = ""; // Limpia resultados anteriores
 
-            tarjetas.forEach(function(tarjeta) {
-                let texto = tarjeta.textContent.toLowerCase();
-                tarjeta.style.display = "none"; // Oculta todas las tarjetas inicialmente
-                if (texto.includes(query)) {
-                    tarjeta.style.display = "block";
-                    resultados.push(tarjeta);
+        if (resultados.length === 0) {
+            resultadosBusqueda.innerHTML = "<p>No se encontraron resultados</p>";
+        } else {
+            resultados.forEach(function(tarjeta) {
+                let enlace = tarjeta.querySelector("a");
+                if (enlace) {
+                    resultadosBusqueda.innerHTML += `<a href="${enlace.getAttribute('href')}">${enlace.textContent}</a><br>`;
                 }
             });
-
-            let resultadosBusqueda = document.getElementById("resultados-busqueda");
-            resultadosBusqueda.innerHTML = ""; // Limpia resultados anteriores
-
-            if (resultados.length === 0) {
-                resultadosBusqueda.innerHTML = "<p>No se encontraron resultados</p>";
-            } else {
-                resultados.forEach(function(tarjeta) {
-                    let enlace = tarjeta.querySelector("a");
-                    if (enlace) {
-                        resultadosBusqueda.innerHTML += `<a href="${enlace.getAttribute('href')}">${enlace.textContent}</a><br>`;
-                    }
-                });
-            }
         }
+    }
+
+    // Añadir un event listener al input de búsqueda para ejecutar la búsqueda al presionar Enter
+    document.getElementById("buscar-input").addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            realizarBusqueda();
+        }
+    });
     </script>
 </body>
+
 </html>

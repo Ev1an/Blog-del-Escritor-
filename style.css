@@ -9,7 +9,7 @@ body {
     font-family: 'Georgia', serif;
     font-style: italic;
     line-height: 1.6;
-    background-color: #fdf6e3;
+    background-color: #eaf8fdd8;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ body {
     overflow: hidden;
     position: relative;
     top: 60px; /* Ajusta este valor para bajar la imagen */
-    left: 20px; /* Ajusta este valor si necesitas mover la imagen más a la derecha */
+    left: 50px; /* Ajusta este valor si necesitas mover la imagen más a la derecha */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1100; /* Asegurar que esté por encima del encabezado */
     margin-top: 80px;
@@ -40,7 +40,7 @@ body {
 
 /* Encabezado */
 header {
-    background: #755c48;
+    background: rgba(135, 207, 235, 0.842);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -127,17 +127,22 @@ section h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    overflow: hidden;
+    flex: 1 1 calc(45% - 20px); /* Ajustar el ancho de las tarjetas */
+    max-width: 45%;
+    max-height: 200px; /* Altura máxima de la tarjeta */
+    overflow: hidden; /* Ocultar el contenido adicional */
     transition: transform 0.3s, max-height 0.3s;
-    max-height: 200px;
-    width: 45%;
-    flex: 1 1 calc(45% - 20px);
 }
+
 
 .tarjeta:hover {
     transform: scale(1.05);
-    max-height: none;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    
+}
+
+.tarjeta:hover .contenido {
+    max-height: none; /* Permitir que el contenido se expanda completamente */
 }
 
 /* Tarjetas grandes centradas */
@@ -185,7 +190,7 @@ article p {
 
 /* Pie de página */
 footer {
-    background: #755c48;
+    background:rgb(94, 157, 182);
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -240,11 +245,13 @@ footer {
 
 /* Estilos para el contenedor de arte */
 .arte-container {
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    flex-direction:initial;
     align-items: center;
     gap: 20px; /* Espacio entre las tarjetas */
     padding: 20px; /* Espacio alrededor de la sección */
+   
 }
 
 /* Tarjetas de arte */
@@ -254,8 +261,9 @@ footer {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    max-width: 600px; /* Ancho máximo de las tarjetas */
+    margin: 10px 10px 10px 10px;
+    max-width: 400px; /* Ancho máximo de las tarjetas */
+    min-width: 300px;
     text-align: center; /* Centrar el texto */
 }
 
@@ -354,4 +362,103 @@ footer {
 
 .redes-sociales a:hover {
     color: #007bff;
+}
+
+@media (max-width: 768px) {
+
+    .autor-imagen {
+        top: 20px; /* Ajusta este valor según sea necesario */
+        left: 80%;
+        transform: translateY(80%);
+     
+    }
+
+
+    .autor-imagen {
+        width: 300px; /* Reduce el tamaño de la imagen */
+        height: 80px;
+        top: 40px; /* Ajusta este valor según sea necesario */
+    }
+
+    .autor-imagen img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #busqueda input[type="search"] {
+        width: 80%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .arte-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-arte {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+/* Estilo para el popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+
+
+/* Estilo para la pantalla difuminada */
+.blur-background::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Opaque el fondo */
+    z-index: -1;
 }
