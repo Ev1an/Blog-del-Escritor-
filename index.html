@@ -39,7 +39,7 @@
                 <div class="autor-imagen">
                     <img src="img/representacion.png"> <!--Foto de perfil-->
                 </div>
-                <h2>Bienvenidos</h2>
+                <h2>Bienvenidos</h2> <!--Lo blanco es texto , puedes editarlo-->
                 <p>Bienvenidos a mi blog, un espacio donde comparto mi pasión por la poesía y el arte. Espero que disfruten de mis creaciones y encuentren inspiración en ellas.</p>
             </div>
         </section>
@@ -54,20 +54,25 @@
         <section id="poesia">
             <h2>Poesía</h2>
             <div class="poesia-container">
-                <div class="tarjeta" onclick="abrirPopup('poema1')">
+                <div class="tarjeta" onclick="abrirPopup('poema1')"> <!--Empiezas copiando desde aqui -->
                     <h3>Título del Poema</h3>
                     <p>Este es un ejemplo de un poema que podría incluirse en el blog. La poesía es un reflejo de nuestras emociones y experiencias, capturadas en palabras.</p>
-                </div>
+                </div><!--Hasta aqui y lo copias debajo-->
                 <div class="tarjeta" onclick="abrirPopup('poema2')">
                     <h3>Título del Poema 2</h3>
                     <p>Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores.</p>
                 </div>
+                <div class="tarjeta" onclick="abrirPopup('poema3')">
+                    <h3>Título del Poema 2</h3>
+                    <p>Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores.</p>
+                </div>
+                
                 <!-- Añade aquí más tarjetas si es necesario -->
             </div>
         </section>
 
         <!-- Ventana emergente (popup) -->
-        <div id="popup" class="popup">
+        <div id="popup" class="popup"> <!--No tocar aqui-->
             <div class="popup-content">
                 <span class="close" onclick="cerrarPopup()">&times;</span>
                 <h2 id="popup-title">Título del Poema</h2>
@@ -79,13 +84,13 @@
         <section id="arte">
             <h2 style="font-size: 60px;">Arte</h2>
             <div class="arte-container">
-                <div class="tarjeta-arte">
-                    <a href="#arte"><img src="img/logo.png" alt="Descripción de la obra de arte"></a>
+                <div class="tarjeta-arte"> <!--Copias desde aqui-->
+                    <a href="#arte"><img src="img/bosque.png" alt="Descripción de la obra de arte"></a>
                     <div class="descripcion">
                         <h3>Título de la Obra de Arte</h3>
                         <p>Esta es una descripción de una obra de arte que se muestra en el blog. El arte es una forma poderosa de expresar nuestras ideas y sentimientos.</p>
                     </div>
-                </div>
+                </div> <!--Hasta aqui y pegas abajo-->
                 <div class="tarjeta-arte">
                     <a href="#arte"><img src="img/bosque.png" alt="Otra descripción de la obra de arte"></a>
                     <div class="descripcion">
@@ -93,7 +98,16 @@
                         <p>Otra obra de arte que demuestra la creatividad y la habilidad del autor.</p>
                     </div>
                 </div>
+
+                <div class="tarjeta-arte"> <!--Copias desde aqui-->
+                    <a href="#arte"><img src="img/bosque.png" alt="Descripción de la obra de arte"></a>
+                    <div class="descripcion">
+                        <h3>Título de la Obra de Arte</h3>
+                        <p>Esta es una descripción de una obra de arte que se muestra en el blog. El arte es una forma poderosa de expresar nuestras ideas y sentimientos.</p>
+                    </div>
                 <!-- Añade más tarjetas de arte aquí -->
+
+
             </div>
         </section>
 
@@ -142,13 +156,26 @@
         let titulo = "Título del Poema";
         let texto = "Aquí va el contenido del poema seleccionado...";
 
+
+
+
+
+        //Atento aqui ,solo con copiar y pegar un else if debajo de otro , le cambias el numero de poema y editas titulo y texto
         if (poemaId === 'poema1') {
             titulo = "Título del Poema";
-            texto = "Este es un ejemplo de un poema que podría incluirse en el blog...";
+            texto = "1.Este es un ejemplo de un poema que podría incluirse en el blog...";
         } else if (poemaId === 'poema2') {
             titulo = "Título del Poema 2";
-            texto = "Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores...";
-        }
+            texto = "2.Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores...";
+        }else if(poemaId === 'poema3' ){ //Copias desde aqui 
+                texto = "3.Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores..."
+        }//pegas aqui 
+
+
+
+//No toques nada debajo
+
+
 
         document.getElementById("popup-title").innerText = titulo;
         document.getElementById("popup-text").innerText = texto;
