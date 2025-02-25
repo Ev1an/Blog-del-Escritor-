@@ -1,0 +1,357 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.6;
+    background-color: #fdf6e3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+/* Autor imagen */
+/* Autor imagen */
+.autor-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 60px; /* Ajusta este valor para bajar la imagen */
+    left: 20px; /* Ajusta este valor si necesitas mover la imagen más a la derecha */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1100; /* Asegurar que esté por encima del encabezado */
+    margin-top: 80px;
+}
+
+
+.autor-imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Encabezado */
+header {
+    background: #755c48;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    top: 0;
+    z-index: 1000
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #6a5140;
+}
+
+/* Barra de búsqueda */
+#busqueda {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#busqueda input[type="search"] {
+    width: 40%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s, width 0.3s;
+}
+
+#busqueda input[type="search"]:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 50%;
+}
+
+/* Secciones principales */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, max-height 0.3s;
+    max-height: 200px;
+    width: 45%;
+    flex: 1 1 calc(45% - 20px);
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    max-height: none;
+}
+
+/* Tarjetas grandes centradas */
+.tarjeta-grande {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.tarjeta-grande .autor-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.autor-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+/* Artículos */
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-top: 0;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+footer {
+    background: #755c48;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Círculo para la imagen del autor */
+.autor-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.autor-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el contenedor de poesía */
+.poesia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las tarjetas */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(45% - 20px); /* Ajustar el ancho de las tarjetas */
+    max-width: 45%;
+    transition: transform 0.3s, max-height 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    max-height: none;
+}
+
+/* Estilos para el contenedor de arte */
+.arte-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Espacio alrededor de la sección */
+}
+
+/* Tarjetas de arte */
+.tarjeta-arte {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    max-width: 600px; /* Ancho máximo de las tarjetas */
+    text-align: center; /* Centrar el texto */
+}
+
+.tarjeta-arte img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    padding: 10px 0;
+}
+
+/* Ajustes en la tarjeta de contacto */
+.tarjeta-grande {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+/* Estilos para la sección de contacto */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.icono-red-social {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.icono-red-social:hover {
+    transform: scale(1.6);
+}
+
+/* Ajustes en la tarjeta de contacto */
+.tarjeta-grande {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Estilos para la sección de soporte técnico */
+#soporte-tecnico {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+#soporte-tecnico h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#soporte-tecnico p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.redes-sociales i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.redes-sociales a:hover {
+    color: #007bff;
+}

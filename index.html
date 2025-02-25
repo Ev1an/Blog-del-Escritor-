@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Poesía y Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta etiquetas para SEO -->
+    <meta name="description" content="Un blog dedicado a la poesía y el arte. Explora el mundo creativo de nuestro autor.">
+    <meta name="keywords" content="Poesía, Arte, Blog, Creatividad, Literatura">
+  
+    <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+    <!-- Enlace a Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blog de Poesía y Arte</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#poesia">Poesía</a></li>
+                <li><a href="#arte">Arte</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="busqueda">
+            <input type="search" id="buscar-input" placeholder="Buscar...">
+        </div>
+    </header>
+    
+    <main>
+        <!-- Sección de Inicio -->
+        <section id="inicio">
+            <div class="tarjeta-grande">
+                <div class="autor-imagen">
+                    <img src="img/representacion.png" >
+                </div>
+                <h2>Bienvenidos</h2>
+                <p>Bienvenidos a mi blog, un espacio donde comparto mi pasión por la poesía y el arte. Espero que disfruten de mis creaciones y encuentren inspiración en ellas.</p>
+            </div>
+        </section>
+        
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy (Nombre), un apasionado de la poesía y el arte. A través de este blog, comparto mis pensamientos y creaciones con el mundo. ¡Gracias por visitar mi espacio creativo!</p>
+        </section>
+        
+        <!-- Sección de Poesía -->
+        <section id="poesia">
+            <h2>Poesia</h2>
+            <div class="poesia-container">
+                <div class="tarjeta">
+                    <a href="#poesia"><h3>Título del Poema</h3></a>
+                    <p>Este es un ejemplo de un poema que podría incluirse en el blog. La poesía es un reflejo de nuestras emociones y experiencias, capturadas en palabras.</p>
+                </div>
+                <div class="tarjeta">
+                    <a href="#poesia"><h3>Título del Poema 2</h3></a>
+                    <p>Otro ejemplo de un poema que se puede compartir en este blog para inspirar y conmover a los lectores.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Arte -->
+        <section id="arte">
+            <h2 style="font-size: 60px;">Arte</h2>
+            <div class="arte-container">
+                <div class="tarjeta-arte">
+                    <a href="#arte"><img src="img/logo.png" alt="Descripción de la obra de arte"></a>
+                    <div class="descripcion">
+                        <h3>Título de la Obra de Arte</h3>
+                        <p>Esta es una descripción de una obra de arte que se muestra en el blog. El arte es una forma poderosa de expresar nuestras ideas y sentimientos.</p>
+                    </div>
+                </div>
+                <div class="tarjeta-arte">
+                    <a href="#arte"><img src="img/bosque.png" alt="Otra descripción de la obra de arte"></a>
+                    <div class="descripcion">
+                        <h3>Título de la Obra de Arte 2</h3>
+                        <p>Otra obra de arte que demuestra la creatividad y la habilidad del autor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <div class="tarjeta-grande">
+                <h2>Contacto</h2>
+                <p>Para consultas o comentarios, por favor envíame un correo a <a href="mailto:tuemail@example.com">Click aquí</a>.</p>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/tuperfil" target="_blank">
+                        <i class="fab fa-facebook icono-red-social"></i>Facebook
+                    </a>
+                    <a href="https://www.instagram.com/tuperfil" target="_blank">
+                        <i class="fab fa-instagram icono-red-social"></i>Instagram
+                    </a>
+                </div>
+            </div>
+            </section>
+            <section id="soporte-tecnico">
+                <div class="tarjeta-grande">
+                    <h2>Soporte Técnico</h2>
+                    <p>Si tienes problemas técnicos o necesitas asistencia, por favor contáctame a través de los siguientes canales:</p>
+                    <div class="redes-sociales">
+                        <a href="https://www.facebook.com/tuperfil" target="_blank">
+                            <i class="fab fa-facebook icono-red-social"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/tuperfil" target="_blank">
+                            <i class="fab fa-instagram icono-red-social"></i> Instagram
+                        </a>
+                        <a href="mailto:tuemail@example.com">
+                            <i class="fas fa-envelope icono-red-social"></i> Correo Electrónico
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Incluye el siguiente enlace en la sección <head> de tu documento HTML si aún no lo has hecho -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Ev1an. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Añade este div para mostrar los resultados de la búsqueda -->
+    <div id="resultados-busqueda"></div>
+    
+    <!-- Código JavaScript para la barra de búsqueda -->
+    <script>
+        document.getElementById("buscar-input").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                realizarBusqueda();
+            }
+        });
+
+        function realizarBusqueda() {
+            let query = document.getElementById("buscar-input").value.toLowerCase();
+            let tarjetas = document.querySelectorAll(".tarjeta, .tarjeta-arte");
+            let resultados = [];
+
+            tarjetas.forEach(function(tarjeta) {
+                let texto = tarjeta.textContent.toLowerCase();
+                tarjeta.style.display = "none"; // Oculta todas las tarjetas inicialmente
+                if (texto.includes(query)) {
+                    tarjeta.style.display = "block";
+                    resultados.push(tarjeta);
+                }
+            });
+
+            let resultadosBusqueda = document.getElementById("resultados-busqueda");
+            resultadosBusqueda.innerHTML = ""; // Limpia resultados anteriores
+
+            if (resultados.length === 0) {
+                resultadosBusqueda.innerHTML = "<p>No se encontraron resultados</p>";
+            } else {
+                resultados.forEach(function(tarjeta) {
+                    let enlace = tarjeta.querySelector("a");
+                    if (enlace) {
+                        resultadosBusqueda.innerHTML += `<a href="${enlace.getAttribute('href')}">${enlace.textContent}</a><br>`;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
